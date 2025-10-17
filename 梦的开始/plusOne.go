@@ -64,7 +64,7 @@ func zeroNum(len int) int {
 	return zero
 }
 
-func main() {
+func main5() {
 	var arr = [3]int{1, 2, 3}
 	var arr2 = [2]int{9, 9}
 
