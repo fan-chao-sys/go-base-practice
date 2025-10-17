@@ -43,7 +43,7 @@ func publicStrPrefix(preStr string, postStr string) string {
 	return preStr[:num]
 }
 
-func main() {
+func main4() {
 	strOne := []string{"flower", "flow", "flight", "fl"} // 公共前缀: fl
 	strTwo := []string{"dog", "racecar", "car"}          // 无
 	fmt.Println("strOne公共字符为:", subStr(strOne))
