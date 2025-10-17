@@ -7,6 +7,11 @@ import (
 // 字符串 - 有效的括号
 // 考察：字符串处理、栈的使用
 // 题目：给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效
+// 要求：
+// 		有效字符串需满足：
+//		左括号必须用相同类型的右括号闭合。
+//		左括号必须以正确的顺序闭合。
+//		每个右括号都有一个对应的相同类型的左括号。
 // 链接：https://leetcode-cn.com/problems/valid-parentheses/
 
 // 思路：
@@ -24,31 +29,36 @@ func isValid(s string) bool {
 		if length%2 == 0 {
 			fmt.Println("当前字符串:", s, "是偶数!")
 
+			var pair = length / 2 // 总共几对值
 			for i := range s {
 				fmt.Printf("循环数组元素:%c\n", s[i])
 				if s[i] == '(' && s[i+1] == ')' {
-					return true
+					pair = pair - 1
 				}
 				if s[i] == '[' && s[i+1] == ']' {
-					return true
+					pair = pair - 1
 				}
 			}
-		}
 
+			if pair <= 0 {
+				return true
+			}
+		}
 	} else {
 		fmt.Print("字符串为空!")
 	}
-
 	return false
 }
 
-func main1() {
+func main() {
 	fmt.Println("第1个:", isValid("()"))
 	fmt.Println("第2个:", isValid(""))
 	fmt.Println("第3个:", isValid("()["))
 	fmt.Println("第4个:", isValid("()]"))
 	fmt.Println("第5个:", isValid("()[]"))
 	fmt.Println("第6个:", isValid("(]"))
+	fmt.Println("第7个:", isValid("()[[[]"))
+	fmt.Println("第8个:", isValid("()[()][]"))
 }
 
 // ------------------------------------------------------------------  实现方式2： 栈 + 哈希表（推荐，易维护）
