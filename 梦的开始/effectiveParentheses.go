@@ -50,7 +50,7 @@ func isValid(s string) bool {
 	return false
 }
 
-func main() {
+func main1() {
 	fmt.Println("第1个:", isValid("()"))
 	fmt.Println("第2个:", isValid(""))
 	fmt.Println("第3个:", isValid("()["))

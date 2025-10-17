@@ -40,7 +40,7 @@ func palindromic(num int) bool {
 	return false
 }
 
-func main() {
+func main2() {
 	fmt.Println("1:", palindromic(1))
 	fmt.Println("2:", palindromic(121))
 	fmt.Println("3:", palindromic(12445))
