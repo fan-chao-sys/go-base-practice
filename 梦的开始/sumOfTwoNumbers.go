@@ -45,7 +45,7 @@ to:
 	return strings.Join(str, "")
 }
 
-func main() {
+func main66() {
 	nums := []int{2, 7, 1, 11, 6, 5, 3, 10, 15}
 	target := 9
 
