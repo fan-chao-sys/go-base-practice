@@ -36,7 +36,7 @@ func merge(intervals [][]int) [][]int {
 	return result
 }
 
-func main() {
+func main88() {
 	intervals := [][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}
 	fmt.Print(merge(intervals))
 }
