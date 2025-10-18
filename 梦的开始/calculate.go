@@ -1,1 +1,1 @@
-package 梦的开始
+package main
