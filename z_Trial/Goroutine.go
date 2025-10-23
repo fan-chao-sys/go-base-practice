@@ -1,4 +1,4 @@
-package 实用练习
+package z_Trial
 
 import (
 	"fmt"
